@@ -2,8 +2,7 @@
 
 A distraction-free YouTube interface with only search functionality, built with Python and Dash.
 
-![A![img.png](img.png)pp Screenshot](https://via.placeholder.com/800x400?text=YouTube+Focus+Clone+Screenshot)
-
+![img_1.png](img_1.png)
 ## Features ✨
 - Clean search-only interface (no recommendations/shorts)
 - Google authentication via Firebase
