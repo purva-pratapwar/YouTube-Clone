@@ -1,0 +1,98 @@
+:root{
+  --bg: #071026;
+  --card: #0b1220;
+  --muted: #9aa6b2;
+  --accent: #ef4444;
+  --glass: rgba(255,255,255,0.03);
+  --radius: 12px;
+  font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+html, body, .app-wrapper {
+  height: 100%;
+  margin: 0;
+  background: linear-gradient(180deg, #061124 0%, #051023 100%);
+  color: #e6eef5;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar-main { border-bottom: 1px solid rgba(255,255,255,0.03); }
+.navbar-brand img { filter: drop-shadow(0 2px 6px rgba(0,0,0,0.6)); }
+
+/* Hero */
+.hero-section { padding: 36px 0 18px 0; text-align: center; }
+.section-badge {
+  background: rgba(255,255,255,0.03);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  color: var(--accent);
+  letter-spacing: 0.08em;
+}
+.hero-title { font-size: 2.2rem; margin-top: 12px; font-weight: 700; color: #fff; }
+.hero-subtitle { color: var(--muted); margin-top: 8px; }
+
+/* Search */
+.search-group { display:flex; justify-content:center; gap:8px; margin-top:12px; }
+.search-input {
+  border-radius: 12px 0 0 12px;
+  padding: 12px 14px;
+  border: none;
+  outline: none;
+  min-width: 320px;
+  box-shadow: 0 6px 24px rgba(2,6,23,0.6);
+  background: rgba(255,255,255,0.02);
+  color: #e6eef5;
+}
+.search-button, .voice-button {
+  border-radius: 0 12px 12px 0;
+  margin-left: 6px;
+}
+
+/* Main content */
+.main-content { flex: 1 0 auto; padding-bottom: 36px; }
+.results-header { padding-left: 12px; margin-bottom: 12px; color: #e6eef5; }
+.results-grid { padding-left: 12px; padding-right: 12px; }
+
+/* Video cards */
+.video-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+}
+.video-thumbnail {
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  object-fit: cover;
+  height: 180px;
+  width: 100%;
+}
+.video-title { font-size: 1rem; color: #fff; margin-top: 6px; margin-bottom: 6px; }
+.video-description { color: var(--muted); font-size: 0.9rem; }
+.video-meta { display:flex; justify-content:space-between; align-items:center; }
+
+/* Welcome card & empty state */
+.welcome-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.03);
+  padding: 18px;
+}
+
+/* Footer */
+.app-footer {
+  margin-top: auto;
+  color: #cbd5e1;
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+/* Buttons smaller on mobile */
+@media (max-width: 576px) {
+  .search-input { min-width: 180px; }
+  .video-thumbnail { height: 140px; }
+  .hero-title { font-size: 1.6rem; }
+}
